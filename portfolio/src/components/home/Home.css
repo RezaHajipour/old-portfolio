@@ -1,0 +1,20 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../../images/main3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(255, 255, 255);
+}
+
+.reza {
+  color: #000000;
+  font-size: 65px;
+  text-align: center;
+}
+.hajipour {
+  width: 15rem;
+  /* align-self: flex-end; */
+}
