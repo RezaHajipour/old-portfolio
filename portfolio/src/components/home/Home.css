@@ -1,17 +1,20 @@
 .main {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  background-image: url("../../images/main3.png");
+  flex-direction: column; */
+  background-image: url("../../images/pp.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-color: rgb(255, 255, 255);
+  background-size: contain;
+  background-position-x: right;
+  background-color: #fcfdfc;
+  min-height: 600px;
+  /* #283141;#f7fafc; #edf2f7; #9cb2ce*/
 }
 
 .reza {
   color: #000000;
-  font-size: 65px;
+  font-size: 45px;
   text-align: center;
 }
 .hajipour {
