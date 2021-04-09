@@ -8,12 +8,14 @@ const Home = () => {
   return (
     <div className="main">
       <Nav />
-      <h1 className="reza">
-        <Flip cascade delay="1000" duration="2500">
-          REZA HAJIPOUR
-        </Flip>
-      </h1>
-      <img className="hajipour" src={reza} />
+      <div className="mainLeft">
+        <h1 className="reza">
+          <Flip cascade delay="1000" duration="2000">
+            REZA HAJIPOUR
+          </Flip>
+        </h1>
+      </div>
+      <div className="mainRight"></div>
     </div>
   );
 };

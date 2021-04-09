@@ -12,14 +12,14 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import ListItemText from "@material-ui/core/ListItemText";
-import reza2 from "../../images/reza2.png";
+import reza7 from "../../images/reza7.png";
 
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
+    backgroundColor: "#2d3748",
   },
   drawer: {
     [theme.breakpoints.up("sm")]: {
@@ -44,10 +44,22 @@ const useStyles = makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: drawerWidth,
+    backgroundColor: "#dee2e6",
+    color: "6b6c6b",
+    display: "flex",
+    alignItems: "center",
+  },
+  menuText: {
+    fontSize: 18,
+    fontWeight: "bold",
   },
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
+  },
+  smallMenuTop: {
+    backgroundColor: "#dee2e6",
+    color: "black",
   },
 }));
 
@@ -65,22 +77,46 @@ const Nav = (props) => {
   const drawer = (
     <div>
       <div className={classes.toolbar} />
-      <img src={reza2} className="reza" style={{ width: 150, height: 150 }} />
+      <img src={reza7} className="reza" style={{ width: 150, height: 150 }} />
+      <br />
+      <h1>REZA HAJIPOUR</h1>
+      <h4>Frontend Web Developer</h4>
 
       <List>
-        <ListItem button component={Link} to="/">
+        <ListItem className={classes.menuText} button component={Link} to="/">
           Home
         </ListItem>
-
-        <Link to="/about">
-          <ListItem button>About</ListItem>
-        </Link>
-        <ListItem button>Works</ListItem>
-        <ListItem button>Skills</ListItem>
-        <ListItem button>Education</ListItem>
-        <ListItem button>Contact</ListItem>
-        <ListItem button component={Link} to="/about">
-          <ListItemText primary="Google" />
+        <ListItem
+          className={classes.menuText}
+          button
+          component={Link}
+          to="/about"
+        >
+          About
+        </ListItem>
+        <ListItem
+          className={classes.menuText}
+          button
+          component={Link}
+          to="/works"
+        >
+          Works
+        </ListItem>
+        <ListItem
+          className={classes.menuText}
+          button
+          component={Link}
+          to="/Skills"
+        >
+          Skills
+        </ListItem>
+        <ListItem
+          className={classes.menuText}
+          button
+          component={Link}
+          to="/Contact"
+        >
+          Contact
         </ListItem>
       </List>
     </div>
@@ -93,7 +129,7 @@ const Nav = (props) => {
     <div className={classes.root}>
       <CssBaseline />
       <AppBar position="fixed" className={classes.appBar}>
-        <Toolbar>
+        <Toolbar className={classes.smallMenuTop}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -139,12 +175,12 @@ const Nav = (props) => {
           </Drawer>
         </Hidden>
       </nav>
-      <main className={classes.content}>
+      {/* <main className={classes.content}>
         <div className={classes.toolbar} />
         <Typography paragraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
         </Typography>
-      </main>
+      </main> */}
     </div>
   );
 };
