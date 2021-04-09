@@ -5,6 +5,9 @@ import Home from "./components/home/Home";
 import Nav from "./components/nav/Nav";
 // import Footer from "./components/footer/Footer";
 import About from "./components/about/About";
+import Skills from "./components/skills/Skills";
+import Works from "./components/works/Works";
+import Contact from "./components/contact/Contact";
 
 const App = () => {
   return (
@@ -15,6 +18,15 @@ const App = () => {
         </Route>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/skills">
+          <Skills />
+        </Route>
+        <Route path="/works">
+          <Works />
+        </Route>
+        <Route path="/contact">
+          <Contact />
         </Route>
       </Switch>
     </>

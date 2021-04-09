@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
 import Flip from "react-reveal/Flip";
-import reza from "../../images/reza.png";
+// import reza from "../../images/reza.png";
 import Nav from "../nav/Nav";
 
 const Home = () => {
