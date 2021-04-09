@@ -14,7 +14,56 @@ import { Link } from "react-router-dom";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import reza7 from "../../images/reza7.png";
 
-const Nav = (props) => {
+const drawerWidth = 240;
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: "flex",
+    // backgroundColor: "#2d3748",
+  },
+  drawer: {
+    [theme.breakpoints.up("sm")]: {
+      width: drawerWidth,
+      flexShrink: 0,
+    },
+  },
+  appBar: {
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+      width: `calc(100% - ${drawerWidth}px)`,
+      marginLeft: drawerWidth,
+    },
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    },
+  },
+  // necessary for content to be below app bar
+  toolbar: theme.mixins.toolbar,
+  drawerPaper: {
+    width: drawerWidth,
+    backgroundColor: "#dee2e6",
+    color: "6b6c6b",
+    display: "flex",
+    alignItems: "center",
+  },
+  menuText: {
+    fontSize: 18,
+    fontWeight: "bold",
+  },
+  content: {
+    flexGrow: 1,
+    padding: theme.spacing(3),
+  },
+  smallMenuTop: {
+    backgroundColor: "#dee2e6",
+    color: "black",
+  },
+}));
+
+const Works = (props) => {
   const { window } = props;
   const classes = useStyles();
   const theme = useTheme();
@@ -126,17 +175,15 @@ const Nav = (props) => {
           </Drawer>
         </Hidden>
       </nav>
-      {/* <main className={classes.content}>
+      <main className={classes.content}>
         <div className={classes.toolbar} />
-        <Typography paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        </Typography>
-      </main> */}
+        <Typography paragraph>my works.... </Typography>
+      </main>
     </div>
   );
 };
 
-Nav.propTypes = {
+Works.propTypes = {
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
@@ -144,53 +191,4 @@ Nav.propTypes = {
   window: PropTypes.func,
 };
 
-export default Nav;
-
-const drawerWidth = 240;
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    // backgroundColor: "#2d3748",
-  },
-  drawer: {
-    [theme.breakpoints.up("sm")]: {
-      width: drawerWidth,
-      flexShrink: 0,
-    },
-  },
-  appBar: {
-    [theme.breakpoints.up("sm")]: {
-      display: "none",
-      width: `calc(100% - ${drawerWidth}px)`,
-      marginLeft: drawerWidth,
-    },
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-    [theme.breakpoints.up("sm")]: {
-      display: "none",
-    },
-  },
-  // necessary for content to be below app bar
-  toolbar: theme.mixins.toolbar,
-  drawerPaper: {
-    width: drawerWidth,
-    backgroundColor: "#dee2e6",
-    color: "6b6c6b",
-    display: "flex",
-    alignItems: "center",
-  },
-  menuText: {
-    fontSize: 18,
-    fontWeight: "bold",
-  },
-  content: {
-    flexGrow: 1,
-    padding: theme.spacing(3),
-  },
-  smallMenuTop: {
-    backgroundColor: "#dee2e6",
-    color: "black",
-  },
-}));
+export default Works;
