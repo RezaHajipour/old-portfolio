@@ -13,6 +13,7 @@ import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import reza7 from "../../images/reza7.png";
+import AddressForm from "../AddressForm";
 
 const drawerWidth = 240;
 
@@ -177,7 +178,9 @@ const Contact = (props) => {
       </nav>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        <Typography paragraph>contact </Typography>
+        <Typography paragraph>
+          <AddressForm />
+        </Typography>
       </main>
     </div>
   );

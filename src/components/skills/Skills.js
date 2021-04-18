@@ -13,55 +13,9 @@ import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import reza7 from "../../images/reza7.png";
-
-const drawerWidth = 240;
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    // backgroundColor: "#2d3748",
-  },
-  drawer: {
-    [theme.breakpoints.up("sm")]: {
-      width: drawerWidth,
-      flexShrink: 0,
-    },
-  },
-  appBar: {
-    [theme.breakpoints.up("sm")]: {
-      display: "none",
-      width: `calc(100% - ${drawerWidth}px)`,
-      marginLeft: drawerWidth,
-    },
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-    [theme.breakpoints.up("sm")]: {
-      display: "none",
-    },
-  },
-  // necessary for content to be below app bar
-  toolbar: theme.mixins.toolbar,
-  drawerPaper: {
-    width: drawerWidth,
-    backgroundColor: "#dee2e6",
-    color: "6b6c6b",
-    display: "flex",
-    alignItems: "center",
-  },
-  menuText: {
-    fontSize: 18,
-    fontWeight: "bold",
-  },
-  content: {
-    flexGrow: 1,
-    padding: theme.spacing(3),
-  },
-  smallMenuTop: {
-    backgroundColor: "#dee2e6",
-    color: "black",
-  },
-}));
+import "./Skills.css";
+import MyCard from "../card/MyCard";
+import Tabs from "@material-ui/core/Tabs";
 
 const Skills = (props) => {
   const { window } = props;
@@ -77,11 +31,15 @@ const Skills = (props) => {
   const drawer = (
     <div>
       <div className={classes.toolbar} />
-      <img src={reza7} className="reza" style={{ width: 150, height: 150 }} />
+      <img
+        src={reza7}
+        className="reza"
+        alt="reza"
+        style={{ width: 150, height: 150 }}
+      />
       <br />
       <h1>REZA HAJIPOUR</h1>
       <h4>Frontend Web Developer</h4>
-
       <List>
         <ListItem className={classes.menuText} button component={Link} to="/">
           Home
@@ -177,7 +135,8 @@ const Skills = (props) => {
       </nav>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        <Typography paragraph>skills.... </Typography>
+
+        <MyCard />
       </main>
     </div>
   );
@@ -192,3 +151,52 @@ Skills.propTypes = {
 };
 
 export default Skills;
+
+const drawerWidth = 240;
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: "flex",
+    // backgroundColor: "#2d3748",
+  },
+  drawer: {
+    [theme.breakpoints.up("sm")]: {
+      width: drawerWidth,
+      flexShrink: 0,
+    },
+  },
+  appBar: {
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+      width: `calc(100% - ${drawerWidth}px)`,
+      marginLeft: drawerWidth,
+    },
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    },
+  },
+  // necessary for content to be below app bar
+  toolbar: theme.mixins.toolbar,
+  drawerPaper: {
+    width: drawerWidth,
+    backgroundColor: "#dee2e6",
+    color: "6b6c6b",
+    display: "flex",
+    alignItems: "center",
+  },
+  menuText: {
+    fontSize: 18,
+    fontWeight: "bold",
+  },
+  content: {
+    flexGrow: 1,
+    padding: theme.spacing(3),
+  },
+  smallMenuTop: {
+    backgroundColor: "#dee2e6",
+    color: "black",
+  },
+}));
