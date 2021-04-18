@@ -7,17 +7,48 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: right;
+  background-position-y: bottom;
   background-color: #fcfdfc;
-  min-height: 600px;
-  /* #283141;#f7fafc; #edf2f7; #9cb2ce*/
+  height: 100vh; /* #283141;#f7fafc; #edf2f7; #9cb2ce*/
 }
 
 .reza {
-  color: #000000;
-  font-size: 45px;
+  /* font-size: 65px;
   text-align: center;
+  letter-spacing: 2px; */
+  font-size: 65px;
+  letter-spacing: 3px;
+  text-align: center;
+  color: #666666;
+  background: #666666;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
 }
-.hajipour {
-  width: 15rem;
-  /* align-self: flex-end; */
+
+.reza2 {
+  font-size: 65px;
+  text-align: center;
+  color: transparent;
+  background: #666666;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+}
+.reza3 {
+  font-size: 65px;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: transparent;
+  background: #666666;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+}
+
+.mainLeft {
+  margin-top: 5rem;
 }

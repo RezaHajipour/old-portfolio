@@ -77,7 +77,12 @@ const Works = (props) => {
   const drawer = (
     <div>
       <div className={classes.toolbar} />
-      <img src={reza7} className="reza" style={{ width: 150, height: 150 }} />
+      <img
+        src={reza7}
+        alt="reza hajipour"
+        className="reza"
+        style={{ width: 150, height: 150 }}
+      />
       <br />
       <h1>REZA HAJIPOUR</h1>
       <h4>Frontend Web Developer</h4>
